@@ -109,4 +109,53 @@ Golden Casino ©2026
 
 </body>
 </html>
+body{
+background:#050505;
+color:white;
+font-family:Arial;
+}
+
+.hero{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+gap:100px;
+}
+
+.hero img{
+width:450px;
+filter:drop-shadow(0 0 60px gold);
+animation:float 5s infinite;
+}
+
+button{
+background:linear-gradient(90deg,#ffd700,#b8860b);
+padding:18px 45px;
+border:none;
+border-radius:40px;
+font-size:20px;
+cursor:pointer;
+}
+
+.card{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,215,0,.3);
+border-radius:25px;
+padding:35px;
+}
+
+.review{
+background:#111;
+border-left:4px solid gold;
+padding:25px;
+margin:20px;
+}
+
+@keyframes float{
+50%{
+transform:translateY(-15px);
+}
+}
 
