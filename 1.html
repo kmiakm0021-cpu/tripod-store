@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Luxury Watch Store</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:#070707;
+color:white;
+
+}
+
+header{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:20px 8%;
+
+background:rgba(0,0,0,.70);
+
+backdrop-filter:blur(10px);
+
+z-index:1000;
+
+}
+
+.logo{
+
+font-size:28px;
+font-weight:700;
+letter-spacing:3px;
+
+color:#D4AF37;
+
+}
+
+nav{
+
+display:flex;
+gap:35px;
+
+}
+
+nav a{
+
+text-decoration:none;
+color:white;
+transition:.4s;
+
+}
+
+nav a:hover{
+
+color:#D4AF37;
+
+}
+
+.hero{
+
+height:100vh;
+
+background:
+linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.82)),
+url("hero.jpg");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+
+padding:0 8%;
+
+}
+
+.content{
+
+max-width:650px;
+
+}
+
+.content span{
+
+color:#D4AF37;
+
+}
+
+.content h1{
+
+font-size:75px;
+line-height:78px;
+margin-bottom:25px;
+
+}
+
+.content p{
+
+font-size:18px;
+color:#ddd;
+
+line-height:32px;
+
+margin-bottom:40px;
+
+}
+
+.buttons{
+
+display:flex;
+gap:20px;
+
+}
+
+.btn{
+
+padding:18px 40px;
+
+text-decoration:none;
+
+border-radius:5px;
+
+font-weight:bold;
+
+transition:.4s;
+
+}
+
+.primary{
+
+background:#D4AF37;
+color:black;
+
+}
+
+.secondary{
+
+border:2px solid #D4AF37;
+color:#D4AF37;
+
+}
+
+.primary:hover{
+
+transform:translateY(-4px);
+
+}
+
+.secondary:hover{
+
+background:#D4AF37;
+color:black;
+
+}
+
+.stats{
+
+padding:80px 8%;
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:30px;
+
+background:#101010;
+
+}
+
+.box{
+
+background:#181818;
+
+padding:35px;
+
+border-radius:10px;
+
+text-align:center;
+
+transition:.4s;
+
+border:1px solid #2c2c2c;
+
+}
+
+.box:hover{
+
+transform:translateY(-8px);
+
+border-color:#D4AF37;
+
+}
+
+.box h2{
+
+font-size:40px;
+color:#D4AF37;
+
+margin-bottom:10px;
+
+}
+
+.categories{
+
+padding:100px 8%;
+
+}
+
+.title{
+
+font-size:42px;
+margin-bottom:50px;
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:30px;
+
+}
+
+.card{
+
+background:#141414;
+
+border-radius:12px;
+
+overflow:hidden;
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card img{
+
+width:100%;
+height:260px;
+object-fit:cover;
+
+}
+
+.card h3{
+
+padding:20px;
+
+font-size:24px;
+
+}
+
+.products{
+
+padding:100px 8%;
+
+background:#111;
+
+}
+
+.product{
+
+background:#181818;
+
+padding:20px;
+
+border-radius:10px;
+
+transition:.4s;
+
+text-align:center;
+
+}
+
+.product:hover{
+
+transform:translateY(-8px);
+
+}
+
+.product img{
+
+width:100%;
+height:260px;
+object-fit:cover;
+
+border-radius:8px;
+
+}
+
+.product h3{
+
+margin:20px 0 10px;
+
+}
+
+.price{
+
+font-size:28px;
+color:#D4AF37;
+margin-bottom:20px;
+
+}
+
+.buy{
+
+padding:14px 30px;
+
+background:#D4AF37;
+
+color:black;
+
+font-weight:bold;
+
+border:none;
+
+cursor:pointer;
+
+}
+
+.newsletter{
+
+padding:120px 8%;
+
+text-align:center;
+
+}
+
+.newsletter input{
+
+width:400px;
+max-width:90%;
+
+padding:18px;
+
+border:none;
+
+outline:none;
+
+}
+
+.newsletter button{
+
+padding:18px 35px;
+
+background:#D4AF37;
+
+border:none;
+
+cursor:pointer;
+
+font-weight:bold;
+
+}
+
+footer{
+
+background:black;
+
+padding:60px;
+
+text-align:center;
+
+color:#777;
+
+}
+
+@media(max-width:900px){
+
+.hero h1{
+
+font-size:50px;
+line-height:55px;
+
+}
+
+.stats{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+nav{
+
+display:none;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+WATCH STORE
+
+</div>
+
+<nav>
+
+<a href="#">Inicio</a>
+
+<a href="#">Colecciones</a>
+
+<a href="#">Novedades</a>
+
+<a href="#">Ofertas</a>
+
+<a href="#">Contacto</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="content">
+
+<h1>
+
+TU PRÓXIMO
+
+<span>RELOJ</span>
+
+COMIENZA AQUÍ
+
+</h1>
+
+<p>
+
+Explora una colección premium de relojes con diseños elegantes,
+deportivos y clásicos para cualquier estilo.
+
+</p>
+
+<div class="buttons">
+
+<a href="#" class="btn primary">Comprar</a>
+
+<a href="#" class="btn secondary">Ver catálogo</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="box">
+
+<h2>500+</h2>
+
+<p>Modelos disponibles</p>
+
+</div>
+
+<div class="box">
+
+<h2>24h</h2>
+
+<p>Envío rápido</p>
+
+</div>
+
+<div class="box">
+
+<h2>100%</h2>
+
+<p>Compra segura</p>
+
+</div>
+
+<div class="box">
+
+<h2>5★</h2>
+
+<p>Atención personalizada</p>
+
+</div>
+
+</section>
+
+<section class="categories">
+
+<h2 class="title">Explora por categoría</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<img src="categoria1.jpg">
+
+<h3>Digitales</h3>
+
+</div>
+
+<div class="card">
+
+<img src="categoria2.jpg">
+
+<h3>Deportivos</h3>
+
+</div>
+
+<div class="card">
+
+<img src="categoria3.jpg">
+
+<h3>Clásicos</h3>
+
+</div>
+
+<div class="card">
+
+<img src="categoria4.jpg">
+
+<h3>Premium</h3>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="products">
+
+<h2 class="title">
+
+Productos destacados
+
+</h2>
+
+<div class="grid">
+
+<div class="product">
+
+<img src="producto1.jpg">
+
+<h3>Modelo Premium</h3>
+
+<div class="price">$3,999</div>
+
+<button class="buy">
+
+Comprar
+
+</button>
+
+</div>
+
+<div class="product">
+
+<img src="producto2.jpg">
+
+<h3>Modelo Classic</h3>
+
+<div class="price">$2,499</div>
+
+<button class="buy">
+
+Comprar
+
+</button>
+
+</div>
+
+<div class="product">
+
+<img src="producto3.jpg">
+
+<h3>Modelo Sport</h3>
+
+<div class="price">$2,999</div>
+
+<button class="buy">
+
+Comprar
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="newsletter">
+
+<h2>
+
+Recibe ofertas exclusivas
+
+</h2>
+
+<br>
+
+<input placeholder="Correo electrónico">
+
+<button>
+
+Suscribirme
+
+</button>
+
+</section>
+
+<footer>
+
+© 2026 Watch Store — Todos los derechos reservados.
+
+</footer>
+
+</body>
+</html>
